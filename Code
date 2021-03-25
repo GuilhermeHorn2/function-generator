@@ -1,0 +1,10 @@
+/generator function
+function* query(){
+ const name = yield "Input your name:";
+ const age = yield "Input your age";
+ return `${name} age is ${age} `;
+}
+const instance = query();
+console.log(instance.next());
+console.log(instance.next('Guilherme'));
+console.log(instance.next('number'));
